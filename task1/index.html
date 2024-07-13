@@ -1,0 +1,35 @@
+<!-- use app.js for node base file readinng -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="file" id="file" multiple>
+    <button onclick="getname()">submit</button>
+
+
+
+</body>
+<script>
+    const fileInput = document.getElementById('file');
+
+    function getname() {
+        const files = fileInput.files;
+
+        if (files.length > 0) { 
+            for (const file of files) {
+                console.log(file.name);
+            }
+        } else {
+            console.log('No files selected.');
+        }
+    }
+</script>
+
+</html>
